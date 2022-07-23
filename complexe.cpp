@@ -12,6 +12,7 @@ class Cmplx
     // {
     //     cout << "je suis dans le constructeurs.....";
     // } 
+
     Cmplx(float a =0, float b = 0)
     {
         cout << "je suis dans le deuxieme constructeurs.....";
@@ -19,7 +20,7 @@ class Cmplx
         im = b;
     }
     //definition des méthodes
-    Cmplx addition(Cmplx c)
+    Cmplx operator+(Cmplx c)
     {
         Cmplx res;
         res.re = (c.re + re);
@@ -31,6 +32,11 @@ class Cmplx
     {
         cout << re << "+i" << im << endl;
     }
+    //definition du destructeurs
+    ~Cmplx()
+    {
+        cout << "passage par le destructeurs......";
+    }
 };
 
 int main()
@@ -41,7 +47,7 @@ int main()
     Cmplx z2(4, 7);
     // z2.re = 2;
     // z2.im = 3;
-    Cmplx z3 = z1.addition(z2);
+    Cmplx z3 = z1.operator+(z2); // même Cmplx z3 = z1+z2;
     z3.afficher();
     // z1.afficher();
 
