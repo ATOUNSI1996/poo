@@ -13,11 +13,11 @@ class Cmplx
     //     cout << "je suis dans le constructeurs.....";
     // } 
 
-    Cmplx(float a =0, float b = 0)
+    Cmplx(float re =0, float im = 0)
     {
         cout << "je suis dans le deuxieme constructeurs.....";
-        re = a;
-        im = b;
+        this->re = re; // this indique le reelle de l'objet appeleant cad mte3 li definie lfou9
+        this->im = im;
     }
     //definition des méthodes
     Cmplx operator+(Cmplx c)
