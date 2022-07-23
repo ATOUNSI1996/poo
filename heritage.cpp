@@ -12,7 +12,10 @@ class Point
 
 class Cercle : public Point
 {
+    protected:
     float r;
+
+    public:
     float surface ()
     {
         float res;
@@ -29,4 +32,35 @@ class Cercle : public Point
     {
         cout << "perimetre = " << perimetre() << "surface = " << surface() << endl;
     }
+    void setR(float r)
+    {
+        this->r = r ; 
+    }
+    float getR()
+    {
+        return r ;
+    }
 };
+
+class Sphere : public Cercle
+{
+    float volume()
+    {
+        float res;
+        res = (4/3)*3.14*r*r*r;
+        return res;
+    }
+    void afficher()
+    {
+        cout << "perimetre = " << volume() << endl;
+    }
+    
+};
+
+
+int main()
+{
+    Cercle c;
+    c.setR(20);
+    
+}
