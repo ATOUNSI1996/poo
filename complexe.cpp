@@ -8,11 +8,11 @@ class Cmplx
     float im;
 
     //definition du contructeurs
-    Cmplx()
-    {
-        cout << "je suis dans le constructeurs.....";
-    } 
-    Cmplx(float a, float b)
+    // Cmplx()
+    // {
+    //     cout << "je suis dans le constructeurs.....";
+    // } 
+    Cmplx(float a =0, float b = 0)
     {
         cout << "je suis dans le deuxieme constructeurs.....";
         re = a;
