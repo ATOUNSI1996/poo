@@ -2,6 +2,7 @@
 using namespace std;
 class Point
 {
+    public:
     float x;
     float y;
     void afficher()
@@ -44,6 +45,7 @@ class Cercle : public Point
 
 class Sphere : public Cercle
 {
+    public:
     float volume()
     {
         float res;
@@ -52,7 +54,13 @@ class Sphere : public Cercle
     }
     void afficher()
     {
-        cout << "perimetre = " << volume() << endl;
+        Point::afficher();
+        Cercle::afficher();
+        cout << "volume = " << volume() << endl;
+    }
+    static void test()
+    {
+        cout << "Test de méthode static....." << endl;
     }
     
 };
@@ -62,5 +70,13 @@ int main()
 {
     Cercle c;
     c.setR(20);
+    Sphere s;
+    s.setR(3);
+    s.x = 2;
+    s.y = 5;
+    s.afficher();
+    Sphere::test();//cette façon est valable uniquement pour les méthode static
     
-}
+
+
+};
