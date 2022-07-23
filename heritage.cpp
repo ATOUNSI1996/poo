@@ -54,7 +54,7 @@ class Sphere : public Cercle
     }
     void afficher()
     {
-        Point::afficher();
+        Point::afficher();//méthode non static mais façon d'écriture valable car nous sommes dans la class
         Cercle::afficher();
         cout << "volume = " << volume() << endl;
     }
@@ -75,7 +75,7 @@ int main()
     s.x = 2;
     s.y = 5;
     s.afficher();
-    Sphere::test();//cette façon est valable uniquement pour les méthode static
+    Sphere::test();//cette façon dans le main est valable uniquement pour les méthode static
     
 
 
